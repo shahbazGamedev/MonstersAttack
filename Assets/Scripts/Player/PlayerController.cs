@@ -41,11 +41,11 @@ public class PlayerController : MonoBehaviour {
 	void Move(float h, float v, bool r){
 		if(r && playerStamina.currentStamina > 0){
 			speed = 100f;
-			anim.SetFloat("Speed", 1.5f);
+			anim.SetBool("Sprint", true);
 			playerStamina.ConsumingStamina(1);
 		}else{
 			speed = 50f;
-			anim.SetFloat("Speed", 1f);
+			anim.SetBool("Sprint", false);
 		}
 		movementDirection.Set(h,0f,v);
 		movementDirection = movementDirection.normalized * speed * Time.deltaTime;

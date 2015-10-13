@@ -8,7 +8,7 @@ public class PlayerStamina : MonoBehaviour {
 	public int currentStamina;
 	int restoringValue = 1;
 	public int consumingValue = 5;
-	Slider staminaSlider;
+	public Slider staminaSlider;
 
 	float restoringSpeed;
 	
@@ -16,7 +16,7 @@ public class PlayerStamina : MonoBehaviour {
 	bool shooting;
 
 	void Awake(){
-		staminaSlider = GameObject.FindWithTag("HUDStaminaSlider").GetComponent<Slider>();
+		staminaSlider = GameObject.FindWithTag("StaminaSliderHUD").GetComponent<Slider>();
 		currentStamina = startingStamina;
 	}
 

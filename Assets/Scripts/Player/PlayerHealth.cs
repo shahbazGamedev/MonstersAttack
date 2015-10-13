@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour {
 
 		damaged = false;
 
-		healthSlider = GameObject.FindWithTag("HUDSlider").GetComponent<Slider>();
+		healthSlider = GameObject.FindWithTag("HealthSliderHUD").GetComponent<Slider>();
 
 
 	}
