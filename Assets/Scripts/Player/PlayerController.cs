@@ -68,7 +68,8 @@ public class PlayerController : MonoBehaviour {
 
 	void Anime(float h, float v){
 
-			//Controlling axes depending on player look
+			//Controlling axes depending on player look 
+		
 		if(playerToMouse.x >= 0 && playerToMouse.z >= 0){  
 			anim.SetFloat("VAxis", CrossPlatformInputManager.GetAxis("Vertical"));
 			anim.SetFloat("HAxis", CrossPlatformInputManager.GetAxis("Horizontal"));
@@ -86,8 +87,15 @@ public class PlayerController : MonoBehaviour {
 
 		if(playerToMouse.x < 0 && playerToMouse.z >= 0){  
 			anim.SetFloat("VAxis", CrossPlatformInputManager.GetAxis("Horizontal") * (-1));
-			anim.SetFloat("HAxis", CrossPlatformInputManager.GetAxis("Vertical"));
-		}
+			anim.SetFloat("HAxis", CrossPlatformInputManager.GetAxis("Vertical")); 
+		} 
+		
+
+		/*if(h > 0 || v > 0){
+			anim.SetBool("IsMoving", true);
+		}else{
+			anim.SetBool("IsMoving", false);
+		}*/
 
 
 
