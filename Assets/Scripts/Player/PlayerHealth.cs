@@ -43,6 +43,8 @@ public class PlayerHealth : MonoBehaviour {
 		}
 
 		damaged=false;
+
+		healthSlider.value = currentHealth;
 	}
 
 	public void TakeDamage(int amount){
@@ -50,6 +52,5 @@ public class PlayerHealth : MonoBehaviour {
 
 		damaged = true;
 
-		healthSlider.value = currentHealth;
 	}
 }

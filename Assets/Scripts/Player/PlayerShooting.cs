@@ -24,7 +24,7 @@ public class PlayerShooting : MonoBehaviour {
 		shootableMask = LayerMask.GetMask("Shootable");
 
 		//damage = PlayerPrefs.GetInt("Damage");
-		damage = 20;
+		damage = 50;
 
 		//gunParticles = GetComponent<ParticleSystem>();
 		gunLine = GetComponent<LineRenderer>();

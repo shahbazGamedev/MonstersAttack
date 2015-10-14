@@ -4,7 +4,8 @@ using System.Collections;
 public class GreenCube : MonoBehaviour {
 
 	// Green cube increase the stamina regeneration
-	bool isInside;
+	
+	public bool isInside;
 	GameObject player;
 	PlayerStamina playerStamina;
 
