@@ -35,7 +35,7 @@ public class PlayerStamina : MonoBehaviour {
 		timer = 0f;
 	}
 
-	void RestoreStamina(){
+	public void RestoreStamina(){
 		if(currentStamina<=100){
 			currentStamina = currentStamina + restoringValue;
 		}
