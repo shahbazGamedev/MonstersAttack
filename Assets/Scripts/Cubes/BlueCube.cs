@@ -6,17 +6,18 @@ public class BlueCube : MonoBehaviour {
 	// Blue cube increase the attack damage and change shooting color when the player is inside the children collider
 
 	public bool isInside;
-	GameObject player;
-	GameObject rifleTip;
-	LineRenderer gunLine;
-	Light gunLight;
 	public Color c1 = Color.red;
 	public Color c2 = Color.red;
 	public Color c3 = Color.yellow;
 	public Color c4 = Color.yellow;
-	PlayerShooting playerShooting;
-	PlayerStamina playerStamina;
-	Renderer rend;
+	
+	private GameObject player;
+	private GameObject rifleTip;
+	private LineRenderer gunLine;
+	private Light gunLight;
+	private PlayerShooting playerShooting;
+	private PlayerStamina playerStamina;
+	private Renderer rend;
 	
 
 	void Awake(){

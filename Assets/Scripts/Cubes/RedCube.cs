@@ -6,9 +6,10 @@ public class RedCube : MonoBehaviour {
 	// Red cube is a healing cube acting only in the radius of the children collider
 
 	public 	bool isInside;
-	GameObject player;
-	PlayerHealth playerHealth;
-	Renderer rend;
+	
+	private GameObject player;
+	private PlayerHealth playerHealth;
+	private Renderer rend;
 
 	void Awake(){
 		player = GameObject.FindWithTag("Player");

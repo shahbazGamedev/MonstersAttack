@@ -6,20 +6,15 @@ public class PlayerHealth : MonoBehaviour {
 
 	public int startingHealth;
 	public int currentHealth;
-
+	public Slider healthSlider;
 	public Image flashImage;
 	public Color flashColor = new Color (1f, 0f, 0f, 0.1f);
+	public PlayerController playerController;
+	public PlayerShooting playerShooting;
 
-	PlayerController playerController;
-	PlayerShooting playerShooting;
-
-	float flashDuration = 2f;
-
-	public Slider healthSlider;
-
-
-	bool damaged;
-	bool isDead;
+	private float flashDuration = 2f;
+	private bool damaged;
+	private bool isDead;
 
 	void Awake(){
 		currentHealth = startingHealth;

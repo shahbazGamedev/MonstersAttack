@@ -7,17 +7,15 @@ public class PlayerShooting : MonoBehaviour {
 	public float attackSpeed=0.15f;
 	public float range = 1000f;
 
-	float timer;
-	Ray shootRay;
-	RaycastHit shootHit;
-	int shootableMask;
-
-	//ParticleSystem gunParticles;
-	LineRenderer gunLine;
-	Light gunLight;
-	float effectDisplayTime = 0.2f;
-
-	PlayerStamina playerStamina;
+	private float timer;
+	private Ray shootRay;
+	private RaycastHit shootHit;
+	private int shootableMask;
+	//private ParticleSystem gunParticles;
+	private LineRenderer gunLine;
+	private Light gunLight;
+	private float effectDisplayTime = 0.2f;
+	private PlayerStamina playerStamina;
 
 
 	void Awake(){

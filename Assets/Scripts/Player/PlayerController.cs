@@ -5,15 +5,14 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerController : MonoBehaviour {
 
 	public float speed=100f;
-	Vector3 movementDirection;
-	Rigidbody playerRigidBody, parentRigidBody;
+	public PlayerStamina playerStamina;
 
-	int floorMask;
-	float cameraRayLenght = 1000f;
-	Vector3 playerToMouse;
-	Animator anim;
-
-	PlayerStamina playerStamina;
+	private int floorMask;
+	private float cameraRayLenght = 1000f;
+	private Rigidbody playerRigidBody, parentRigidBody;
+	private Vector3 movementDirection;
+	private Vector3 playerToMouse;
+	private Animator anim;
 
 	private void Awake(){
 
