@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
 	public PlayerStamina playerStamina;
 
 	private int floorMask;
-	private float cameraRayLenght = 1000f;
+	private float cameraRayLenght = 1000000f;
 	private Rigidbody playerRigidBody, parentRigidBody;
 	private Vector3 movementDirection;
 	private Vector3 playerToMouse;
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 			anim.SetBool("Sprint", true);
 			playerStamina.ConsumingStamina(1);
 		}else{
-			speed = 50f;
+			speed = 20f;
 			anim.SetBool("Sprint", false);
 		}
 		movementDirection.Set(h,0f,v);
@@ -59,6 +59,8 @@ public class PlayerController : MonoBehaviour {
 		if(Physics.Raycast(cameraRay, out groundHit, cameraRayLenght, floorMask)){
 			playerToMouse = groundHit.point - transform.position;
 			playerToMouse.y=0f;
+
+			Debug.Log("Fail");
 
 			Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
 			parentRigidBody.MoveRotation(newRotation);
