@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour {
 			anim.SetBool("Sprint", true);
 			playerStamina.ConsumingStamina(1);
 		}else{
-			speed = 20f;
+			speed = 50f;
 			anim.SetBool("Sprint", false);
 		}
 		movementDirection.Set(h,0f,v);

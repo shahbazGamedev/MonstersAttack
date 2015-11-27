@@ -3,28 +3,31 @@ using System.Collections;
 
 public class EnemyHealth : MonoBehaviour {
 
-	public int startingHealth=100;
+    //Public bools
+    public bool isDead;
+
+    //Public ints
+    public int startingHealth=100;
 	public int currentHealth;
 
-	bool isDead;
-
-	void Awake(){
+    public void Awake(){
+        //Set up the current health
 		currentHealth = startingHealth;
 	}
 
-	void Update(){
+    public void Update(){
 		if(currentHealth<=0){
 			Death();
 		}
 	}
 
+    //Function to lose health
 	public void TakeDamage(int amount, Vector3 hitPoint){
-		currentHealth = currentHealth - amount;
-		Debug.Log(amount);
-		
+		currentHealth = currentHealth - amount;		
 	}
 
-	void Death(){
+    //Function to die (need to apply a transfrom to hide it into the ground)
+    public void Death(){
 		Destroy(this.gameObject);
 	}
 }

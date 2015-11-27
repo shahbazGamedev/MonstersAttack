@@ -1,11 +1,11 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{C7A56E20-1630-6260-E160-E4B7D8398341}") = "MonstersAttack", "Assembly-CSharp-firstpass.csproj", "{FC32F40D-8171-B2D2-3545-9501D544A28E}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonstersAttack.CSharp.Plugins", "MonstersAttack.CSharp.Plugins.csproj", "{7D21BF3E-1F04-8E9A-1B10-FEA30E0D6B41}"
 EndProject
-Project("{C7A56E20-1630-6260-E160-E4B7D8398341}") = "MonstersAttack", "Assembly-CSharp.csproj", "{376760A3-39BD-412C-B79C-2DC3F8351F9D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonstersAttack.CSharp", "MonstersAttack.CSharp.csproj", "{85605AEB-2FC9-9AF4-0FF1-7DEE751BC2AE}"
 EndProject
-Project("{C7A56E20-1630-6260-E160-E4B7D8398341}") = "MonstersAttack", "Assembly-CSharp-Editor.csproj", "{0D942FB4-1449-0B5A-948D-3C0BE952C9B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonstersAttack.CSharp.Editor", "MonstersAttack.CSharp.Editor.csproj", "{EADF7FF2-137B-A52B-E773-51894C6A60C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,40 +13,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FC32F40D-8171-B2D2-3545-9501D544A28E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC32F40D-8171-B2D2-3545-9501D544A28E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC32F40D-8171-B2D2-3545-9501D544A28E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC32F40D-8171-B2D2-3545-9501D544A28E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{376760A3-39BD-412C-B79C-2DC3F8351F9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{376760A3-39BD-412C-B79C-2DC3F8351F9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{376760A3-39BD-412C-B79C-2DC3F8351F9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{376760A3-39BD-412C-B79C-2DC3F8351F9D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D942FB4-1449-0B5A-948D-3C0BE952C9B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D942FB4-1449-0B5A-948D-3C0BE952C9B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D942FB4-1449-0B5A-948D-3C0BE952C9B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D942FB4-1449-0B5A-948D-3C0BE952C9B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D21BF3E-1F04-8E9A-1B10-FEA30E0D6B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D21BF3E-1F04-8E9A-1B10-FEA30E0D6B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D21BF3E-1F04-8E9A-1B10-FEA30E0D6B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D21BF3E-1F04-8E9A-1B10-FEA30E0D6B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85605AEB-2FC9-9AF4-0FF1-7DEE751BC2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85605AEB-2FC9-9AF4-0FF1-7DEE751BC2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85605AEB-2FC9-9AF4-0FF1-7DEE751BC2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85605AEB-2FC9-9AF4-0FF1-7DEE751BC2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EADF7FF2-137B-A52B-E773-51894C6A60C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EADF7FF2-137B-A52B-E773-51894C6A60C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EADF7FF2-137B-A52B-E773-51894C6A60C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EADF7FF2-137B-A52B-E773-51894C6A60C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-									GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
-		Policies = $0
-		$0.TextStylePolicy = $1
-		$1.inheritsSet = null
-		$1.scope = text/x-csharp
-		$0.CSharpFormattingPolicy = $2
-		$2.inheritsSet = Mono
-		$2.inheritsScope = text/x-csharp
-		$2.scope = text/x-csharp
-		$0.TextStylePolicy = $3
-		$3.FileWidth = 120
-		$3.TabWidth = 4
-		$3.IndentWidth = 4
-		$3.EolMarker = Unix
-		$3.inheritsSet = Mono
-		$3.inheritsScope = text/plain
-		$3.scope = text/plain
-	EndGlobalSection
-
 EndGlobal

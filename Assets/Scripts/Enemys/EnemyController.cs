@@ -3,20 +3,23 @@ using System.Collections;
 
 public class EnemyController : MonoBehaviour {
 
-	Transform player;
-	NavMeshAgent nav;
-	PlayerHealth playerHealth;
+    //Public references
+	public Transform player;
+	public NavMeshAgent nav;
+	public PlayerHealth playerHealth;
 
-	void Awake(){
+    public void Awake(){
+        //Initialize components
 		nav = GetComponent<NavMeshAgent>();
 		player = GameObject.FindWithTag("Player").transform;
 		playerHealth = player.GetComponent<PlayerHealth>();
 	}
 
-	void Update(){
+    public void Update(){
+        //If the player is alive...
 		if(playerHealth.currentHealth > 0){
+            //...Pathfind him
 			nav.SetDestination(player.position);
-			
 		}
 	}
 }

@@ -3,44 +3,53 @@ using System.Collections;
 
 public class EnemyAttack : MonoBehaviour {
 
-	public float timeBetweenAttacks = 0.2f;
-	public int attackDamage = 10;
+    //Public bools
+    public bool playerInRange;
 
-	GameObject player;
-	PlayerHealth playerHealth;
+    //Public floats
+    public float timeBetweenAttacks = 0.2f;
+    public float timer;
 
-	float timer;
-	bool playerInRange;
+    //Public ints
+    public int attackDamage = 10;
 
-	void Awake(){
+    //Public references
+	public GameObject player;
+	public PlayerHealth playerHealth;
+
+	public void Awake(){
+        //Initialize components
 		player = GameObject.FindWithTag("Player");
-
 		playerHealth = player.GetComponent<PlayerHealth>();
 	}
 
-	void OnTriggerEnter(Collider other){
+    //Check if the player is inside the trigger
+    //Set up playerInRange depending on state
+    public void OnTriggerEnter(Collider other){
 		if(other.gameObject == player){
 			playerInRange = true;
 		}
-	}	
+	}
 
-	void OnTriggerExit(Collider other){
+    public void OnTriggerExit(Collider other){
 		if(other.gameObject == player){
 			playerInRange = false;
 		}
 	}
 
-	void Update(){
+    public void Update(){
 		timer += Time.deltaTime;
 
+        //If the player is inside...
 		if(timer >= timeBetweenAttacks && playerInRange){
+            //...Attack...
 			Attack();
 		}
 	}
 
-	void Attack(){
+    public void Attack(){
 		timer = 0f;
-
+        //Take damage from the player
 		playerHealth.TakeDamage(attackDamage);
 	}
 

@@ -4,19 +4,32 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class SkillsPoints : MonoBehaviour {
-	string playerSkill;
-	int playerSkillValue;
-	int sliderValue;
-	private float damageSlider, healthSlider, staminaSlider, reStaminaSlider, attackSpeedSlider;
-	public int skillPoints;
+    
+    //Public floats
+    private float damageSlider;
+    private float healthSlider;
+    private float staminaSlider;
+    private float reStaminaSlider;
+    private float attackSpeedSlider;
 
-	void Start(){
+    //Public ints
+    public int playerSkillValue;
+    public int sliderValue;
+    public int skillPoints;
+
+    //Public strings
+    public string playerSkill;
+
+
+
+    void Start(){
+        //Initialize components
 		damageSlider = GameObject.Find("Slider_Damage").GetComponent<Slider>().value;
 		healthSlider = GameObject.Find("Slider_Health").GetComponent<Slider>().value;
 		staminaSlider = GameObject.Find("Slider_Stamina").GetComponent<Slider>().value;
 		reStaminaSlider = GameObject.Find("Slider_ReStamina").GetComponent<Slider>().value;
 		attackSpeedSlider = GameObject.Find("Slider_AttackSpeed").GetComponent<Slider>().value;
-		Debug.Log("Value loaded");
+
 		HaveSkillPoints();
 		skillPoints = 10;
 	}

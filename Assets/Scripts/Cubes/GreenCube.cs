@@ -3,32 +3,39 @@ using System.Collections;
 
 public class GreenCube : MonoBehaviour {
 
-	// Green cube increase the stamina regeneration
+	//Green cube increase the stamina regeneration
 	
+    //Public bools
 	public bool isInside;
-	GameObject player;
-	PlayerStamina playerStamina;
 
-	void Awake(){
+    //Public references
+	public GameObject player;
+	public PlayerStamina playerStamina;
+
+	public void Awake(){
+        //Initialize components
 		player = GameObject.FindWithTag("Player");
 		playerStamina = player.GetComponent<PlayerStamina>();
 
 	}
 
-	void OnTriggerEnter(Collider other){
+	public void OnTriggerEnter(Collider other){
+        //If the player is inside
 		if(other.gameObject == player){
 			isInside = true;
 		}
 	}
 
-	void OnTriggerExit(Collider other){
+	public void OnTriggerExit(Collider other){
+        //If the player isnt inside
 		if(other.gameObject == player){
 			isInside = false;
 		}
 	}
 
-	void Update(){
+	public void Update(){
 		if(isInside){
+            //Restore the stamina continuosly
 			playerStamina.RestoreStamina();
 		}
 	}
