@@ -5,11 +5,12 @@ public class ShaderController : MonoBehaviour {
 
 	// This script control the emissions of the shader depending on which cubes are affecting the player
 
-	BlueCube blueCube;
-	RedCube redCube;
-	GreenCube greenCube;
-	Renderer rend;
-	Light neckLight;
+    //Public references
+	public BlueCube blueCube;
+	public RedCube redCube;
+	public GreenCube greenCube;
+	public Renderer rend;
+	public Light neckLight;
 	
 	void Awake(){
 		rend = GetComponent<Renderer>();

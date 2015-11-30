@@ -3,16 +3,21 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
-
+    //Public ints
 	public int startingHealth;
 	public int currentHealth;
+
+    //Public references
 	public Slider healthSlider;
 	public Image flashImage;
 	public Color flashColor = new Color (1f, 0f, 0f, 0.1f);
 	public PlayerController playerController;
 	public PlayerShooting playerShooting;
 
+    //Private floats
 	private float flashDuration = 2f;
+
+    //Private bools
 	private bool damaged;
 	private bool isDead;
 

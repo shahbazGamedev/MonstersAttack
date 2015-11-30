@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlayerStats : MonoBehaviour {
 
-	int playerHealth, playerStamina, playerReStamina, playerDamage;  // PlayerStats
-	float playerAttackSpeed;
+	public int playerHealth, playerStamina, playerReStamina, playerDamage;  // PlayerStats
+	public float playerAttackSpeed;
 
 	void Awake(){
 		playerDamage = PlayerPrefs.GetInt("Damage"); // Use x10 x25 x50 x100 x500 Values

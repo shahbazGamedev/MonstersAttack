@@ -4,30 +4,38 @@ using UnityStandardAssets.CrossPlatformInput;
 
 public class PlayerController : MonoBehaviour {
 
+    //Public floats
 	public float speed=100f;
+
+    //Public references
 	public PlayerStamina playerStamina;
 
+    //Private ints
 	private int floorMask;
+
+    //Private floats
 	private float cameraRayLenght = 1000000f;
+
+    //Private references
 	private Rigidbody playerRigidBody, parentRigidBody;
 	private Vector3 movementDirection;
 	private Vector3 playerToMouse;
 	private Animator anim;
 
 	private void Awake(){
-
+        //Initialize components
 		playerRigidBody = GetComponent<Rigidbody>();
 		parentRigidBody = GetComponentInParent<Rigidbody>();
-
-		floorMask = LayerMask.GetMask("Ground");
-
 		anim = GetComponent<Animator>();
-
 		playerStamina = GetComponent<PlayerStamina>();
 
-	}
+        //Get the floor mask
+        floorMask = LayerMask.GetMask("Ground");
+
+    }
 
 	private void FixedUpdate(){
+        //Get axis every frame (This must be fixed with a #if mobile input)
 		float h = CrossPlatformInputManager.GetAxis("Horizontal");
 		float v = CrossPlatformInputManager.GetAxis("Vertical");
 		bool r = Input.GetButton("Fire3");
@@ -37,6 +45,7 @@ public class PlayerController : MonoBehaviour {
 		Anime(h,v);
 	}
 
+    //Function to perform the player movement
 	void Move(float h, float v, bool r){
 		if(r && playerStamina.currentStamina > 0){
 			speed = 100f;
@@ -51,6 +60,7 @@ public class PlayerController : MonoBehaviour {
 		playerRigidBody.MovePosition (movementDirection + transform.position);
 	}
 
+    //Function to perform the player turning
 	void Turning(){
 		Ray cameraRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -67,6 +77,7 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+    //Function to control the animations (Must be fixed with new animations)
 	void Anime(float h, float v){
 
 			//Controlling axes depending on player look 

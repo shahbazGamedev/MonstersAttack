@@ -2,19 +2,25 @@
 using System.Collections;
 
 public class PlayerShooting : MonoBehaviour {
-
+    //Public ints
 	public int damage = 50;
+
+    //Public floats
 	public float attackSpeed=0.15f;
 	public float range = 1000f;
 
-	private float timer;
-	private Ray shootRay;
+    //Private ints
+    private int shootableMask;
+
+    //Private floats
+    private float timer;
+    private float effectDisplayTime = 0.2f;
+
+    //Private references
+    private Ray shootRay;
 	private RaycastHit shootHit;
-	private int shootableMask;
-	//private ParticleSystem gunParticles;
 	private LineRenderer gunLine;
 	private Light gunLight;
-	private float effectDisplayTime = 0.2f;
 	private PlayerStamina playerStamina;
 
 
