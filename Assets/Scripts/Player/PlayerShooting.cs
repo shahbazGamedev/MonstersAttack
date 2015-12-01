@@ -76,8 +76,8 @@ public class PlayerShooting : MonoBehaviour {
 		playerStamina.ConsumingStamina(playerStamina.consumingValue);
 
 		if(Physics.Raycast (shootRay, out shootHit, range, shootableMask)){
-			EnemyHealth enemyHealth = shootHit.collider.GetComponent<EnemyHealth>();			
-			
+            EnemyHealth enemyHealth = shootHit.collider.GetComponentInParent<EnemyHealth>();
+
 			if(enemyHealth != null){
 				enemyHealth.TakeDamage(damage, shootHit.point);
 			}

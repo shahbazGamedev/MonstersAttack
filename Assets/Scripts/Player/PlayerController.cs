@@ -70,8 +70,6 @@ public class PlayerController : MonoBehaviour {
 			playerToMouse = groundHit.point - transform.position;
 			playerToMouse.y=0f;
 
-			Debug.Log("Fail");
-
 			Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
 			parentRigidBody.MoveRotation(newRotation);
 		}

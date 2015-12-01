@@ -25,14 +25,14 @@ public class EnemyAttack : MonoBehaviour {
 
     //Check if the player is inside the trigger
     //Set up playerInRange depending on state
-    public void OnTriggerEnter(Collider other){
-		if(other.gameObject == player){
+    public void OnCollisionEnter(Collision other){
+		if(other.gameObject.tag == "Player"){
 			playerInRange = true;
 		}
 	}
 
-    public void OnTriggerExit(Collider other){
-		if(other.gameObject == player){
+    public void OnCollisionExit(Collision other){
+		if(other.gameObject.tag == "Player"){
 			playerInRange = false;
 		}
 	}
