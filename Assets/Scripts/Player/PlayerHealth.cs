@@ -32,10 +32,6 @@ public class PlayerHealth : MonoBehaviour {
 		healthSlider = GameObject.FindWithTag("HealthSliderHUD").GetComponent<Slider>();
 
         flashImage = GameObject.Find("DamageSplash").GetComponent<Image>();
-
-        flashImage.enabled = false;
-
-
 	}
 
 	void Update(){

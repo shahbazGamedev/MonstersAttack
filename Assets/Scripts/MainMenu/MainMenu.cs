@@ -7,14 +7,14 @@ public class MainMenu : MonoBehaviour {
     //Public references
     public GameObject mainPanel;
     public GameObject optionsPanel;
-    public GameObject playPanel;
+    public GameObject skillsPanel;
 
     void Awake()
     {
         //Initialize components
         mainPanel = GameObject.Find("MainPanel");
         optionsPanel = GameObject.Find("OptionsPanel");
-        playPanel = GameObject.Find("PlayPanel");
+        skillsPanel = GameObject.Find("SkillsPanel");
 
         //Dissable all the panels
         DissableAllPanels();
@@ -22,11 +22,18 @@ public class MainMenu : MonoBehaviour {
         mainPanel.SetActive(true);
     }
 
-    //Function to show the play menu
-	public void Play()
+    //Function to show the main menu
+    public void Main()
     {
         DissableAllPanels();
-        playPanel.SetActive(true);
+        mainPanel.SetActive(true);
+    }
+
+    //Function to show the play menu
+	public void Skills()
+    {
+        DissableAllPanels();
+        skillsPanel.SetActive(true);
     }
 
     //Function to show the options menu
@@ -34,6 +41,12 @@ public class MainMenu : MonoBehaviour {
     {
         DissableAllPanels();
         optionsPanel.SetActive(true);
+    }
+
+    //Function to load the scene to play
+    public void PlayLevel()
+    {
+        Application.LoadLevel(1);
     }
 
     //Function to exit the application
@@ -47,6 +60,6 @@ public class MainMenu : MonoBehaviour {
     {
         mainPanel.SetActive(false);
         optionsPanel.SetActive(false);
-        playPanel.SetActive(false);
+        skillsPanel.SetActive(false);
     }
 }
